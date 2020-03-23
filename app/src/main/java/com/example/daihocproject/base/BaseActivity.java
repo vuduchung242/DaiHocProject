@@ -10,7 +10,7 @@ import androidx.databinding.ViewDataBinding;
 
 import com.example.daihocproject.dialog.DialogProgessBar;
 
-public abstract class BaseActivity <VB extends ViewDataBinding> extends AppCompatActivity {
+public abstract class BaseActivity<VB extends ViewDataBinding> extends AppCompatActivity {
     public DialogProgessBar mDialogProgess;
     /**
      * View Binding
@@ -75,14 +75,14 @@ public abstract class BaseActivity <VB extends ViewDataBinding> extends AppCompa
     }
 
     public void showDialog() {
-        if(mDialogProgess == null) {
+        if (mDialogProgess == null) {
             mDialogProgess = new DialogProgessBar(this);
             mDialogProgess.show();
         }
     }
 
     public void dismissDialog() {
-        if(mDialogProgess != null && mDialogProgess.isShowing()) {
+        if (mDialogProgess != null && mDialogProgess.isShowing()) {
             mDialogProgess.dismissDialog();
             mDialogProgess = null;
         }

@@ -13,12 +13,12 @@ import androidx.databinding.ViewDataBinding;
 public abstract class BaseDialog<VB extends ViewDataBinding> extends Dialog {
     private VB mViewBinding;
 
-    public BaseDialog( Context context) {
+    public BaseDialog(Context context) {
         super(context);
     }
 
     private <T extends ViewDataBinding> T setBindingContentView(@LayoutRes int layoutRes) {
-       return DataBindingUtil.inflate(LayoutInflater.from(getContext()), layoutRes, null, false);
+        return DataBindingUtil.inflate(LayoutInflater.from(getContext()), layoutRes, null, false);
     }
 
     protected VB getViewBinding() {

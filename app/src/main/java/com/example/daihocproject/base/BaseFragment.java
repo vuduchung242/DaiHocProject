@@ -94,14 +94,14 @@ public abstract class BaseFragment<VB extends ViewDataBinding> extends Fragment 
     }
 
     public void showDialog() {
-        if(mDialogProgess == null) {
+        if (mDialogProgess == null) {
             mDialogProgess = new DialogProgessBar(getContext());
             mDialogProgess.show();
         }
     }
 
     public void dismissDialog() {
-        if(mDialogProgess != null && mDialogProgess.isShowing()) {
+        if (mDialogProgess != null && mDialogProgess.isShowing()) {
             mDialogProgess.dismissDialog();
             mDialogProgess = null;
         }
